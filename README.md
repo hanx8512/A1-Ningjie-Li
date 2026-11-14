@@ -1,22 +1,26 @@
 # PROG2004 Assessment 1: Current-day appointment system
 
-## Run
+## Run the complete demonstration
 
-Compile all files in `src`, then run `AssignmentOne`. The project uses only the Java standard library and works with Java 11 or later.
+The entry point is `public static void main(String[] args)` in `src/AssignmentOne.java`. The project uses only the Java standard library and works with Java 11 or later. Extract the ZIP, open a terminal in the extracted project directory (the directory containing `src`), and use the commands for your system. A JDK must be installed so that both `javac` and `java` are available.
 
-From a terminal in this project directory:
+Windows PowerShell:
 
-```text
+```powershell
+New-Item -ItemType Directory -Force out | Out-Null
+javac -d out (Get-ChildItem .\src\*.java).FullName
+java -cp out AssignmentOne
+```
+
+macOS or Linux:
+
+```sh
+mkdir -p out
 javac -d out src/*.java
 java -cp out AssignmentOne
 ```
 
-On Windows PowerShell, if the wildcard is not expanded by your Java installation, use:
-
-```powershell
-javac -d out (Get-ChildItem src\*.java).FullName
-java -cp out AssignmentOne
-```
+In a Java IDE, open this project directory and run the `main` method in `AssignmentOne.java`. The console output shows the professionals, successful and rejected bookings, sorted and filtered lists, cancellations, and the updated list.
 
 ## Design
 
