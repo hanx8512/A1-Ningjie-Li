@@ -1,8 +1,12 @@
 # PROG2004 Assessment 1: Current-day appointment system
 
+## Before running
+
+Use any JDK version 11 or later. It must be configured so that `javac` and `java` are available in the terminal. The project uses only the Java standard library and does not depend on a particular Java installation path. A Java IDE configured with a JDK is also suitable.
+
 ## Run the complete demonstration
 
-The entry point is `public static void main(String[] args)` in `src/AssignmentOne.java`. The project uses only the Java standard library and works with Java 11 or later. Extract the ZIP, open a terminal in the extracted project directory (the directory containing `src`), and use the commands for your system. A JDK must be installed so that both `javac` and `java` are available.
+The only entry point is `public static void main(String[] args)` in `src/AssignmentOne.java`. Extract the ZIP, open a terminal in the extracted project directory (the directory containing `src`), and use the commands for your system.
 
 Windows PowerShell:
 
@@ -21,6 +25,8 @@ java -cp out AssignmentOne
 ```
 
 In a Java IDE, open this project directory and run the `main` method in `AssignmentOne.java`. The console output shows the professionals, successful and rejected bookings, sorted and filtered lists, cancellations, and the updated list.
+
+If a terminal says that `javac` or `java` is not recognized, configure the JDK on that computer before using the terminal commands above. The source code and commands do not need to be changed.
 
 ## Design
 
