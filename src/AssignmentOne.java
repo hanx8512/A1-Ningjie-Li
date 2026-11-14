@@ -56,11 +56,6 @@ public class AssignmentOne {
         System.out.println(manager.addAppointment(new Appointment(ben, gpC, 16, 0)));
         System.out.println(manager.addAppointment(new Appointment(ben, gpC, 8, 15)));
         System.out.println(manager.addAppointment(null));
-        try {
-            new Appointment(new Patient("", "0412345699"), gpA, 10, 0);
-        } catch (IllegalArgumentException error) {
-            System.out.println("Warning: " + error.getMessage());
-        }
 
         section("ALL APPOINTMENTS, SORTED BY TIME");
         System.out.print(manager.formatAppointments(manager.getAllAppointments()));
