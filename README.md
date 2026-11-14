@@ -32,5 +32,3 @@ In a Java IDE, open this project directory and run the `main` method in `Assignm
 - Working days are recorded as required, but this simulation contains no calendar date. The brief requires only current-day booking and does not specify a rule for comparing a professional's weekly days with a date.
 
 `AssignmentOne.main` demonstrates valid bookings, duplicate and invalid bookings, all and filtered listings, both cancellation methods, and warnings for unsuccessful operations.
-
-`AssignmentOneChecks` provides additional checks for time boundaries, ID equality, defensive copies, sorting, filtering and cancellation. After compiling, run it with `java -cp out AssignmentOneChecks`.

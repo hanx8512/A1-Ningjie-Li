@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * Stores the details shared by every kind of health professional.
  * A plain health professional cannot be created because each one needs a role.
@@ -80,7 +78,11 @@ public abstract class HealthProfessional {
 
     /** Returns a copy of the working days. */
     public String[] getWorkingDays() {
-        return workingDays.clone();
+        String[] copy = new String[workingDays.length];
+        for (int i = 0; i < workingDays.length; i++) {
+            copy[i] = workingDays[i];
+        }
+        return copy;
     }
 
     /** Returns the name of the concrete professional role. */
@@ -89,8 +91,16 @@ public abstract class HealthProfessional {
     /** Returns the shared information in a readable form. */
     @Override
     public String toString() {
+        String daysText = "[";
+        for (int i = 0; i < workingDays.length; i++) {
+            if (i > 0) {
+                daysText += ", ";
+            }
+            daysText += workingDays[i];
+        }
+        daysText += "]";
         return getRole() + " | ID: " + id + " | Name: " + name
-            + " | Working days: " + Arrays.toString(workingDays);
+            + " | Working days: " + daysText;
     }
 
     /** Professionals represent the same person when their IDs are equal. */
